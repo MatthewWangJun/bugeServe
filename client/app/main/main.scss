@@ -1,3 +1,195 @@
+
+@font-face {
+  font-family: 'SansCJK-L';
+  src: url('../assets/font/KaiGenGothicSC-Light.eot');
+  src: url('../assets/font/KaiGenGothicSC-Light.eot?#iefix') format('embedded-opentype'),
+  url('../assets/font/KaiGenGothicSC-Light.woff2') format('woff2'),
+  url('../assets/font/KaiGenGothicSC-Light.woff') format('woff'),
+  url('../assets/font/KaiGenGothicSC-Light.ttf') format('truetype'),
+  url('../assets/font/KaiGenGothicSC-Light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SansCJK-B';
+  src: url('../assets/font/KaiGenGothicSC-Bold.eot');
+  src: url('../assets/font/KaiGenGothicSC-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../assets/font/KaiGenGothicSC-Bold.woff2') format('woff2'),
+  url('../assets/font/KaiGenGothicSC-Bold.woff') format('woff'),
+  url('../assets/font/KaiGenGothicSC-Bold.ttf') format('truetype'),
+  url('../assets/font/KaiGenGothicSC-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SansCJK-M';
+  src: url('../assets/font/KaiGenGothicSC-Medium.eot');
+  src: url('../assets/font/KaiGenGothicSC-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../assets/font/KaiGenGothicSC-Medium.woff2') format('woff2'),
+  url('../assets/font/KaiGenGothicSC-Medium.woff') format('woff'),
+  url('../assets/font/KaiGenGothicSC-Medium.ttf') format('truetype'),
+  url('../assets/font/KaiGenGothicSC-Medium.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SansCJK';
+  src: url('../assets/font/KaiGenGothicSC-Normal.eot');
+  src: url('../assets/font/KaiGenGothicSC-Normal.eot?#iefix') format('embedded-opentype'),
+  url('../assets/font/KaiGenGothicSC-Normal.woff2') format('woff2'),
+  url('../assets/font/KaiGenGothicSC-Normal.woff') format('woff'),
+  url('../assets/font/KaiGenGothicSC-Normal.ttf') format('truetype'),
+  url('../assets/font/KaiGenGothicSC-Normal.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+$banner-height:500px;
+.banner{
+  .swiper-container {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width:100%;
+    height: auto;
+    min-height: $banner-height;
+    cursor: pointer;
+
+    .swiper-slide a {
+      display: block;
+      min-height: $banner-height;
+      cursor: default;
+    }
+    .spaceBG{
+      width:100%;
+      height:$banner-height;
+      background:url("../assets/images/banner_space.png");
+      position: absolute;
+      top:0;
+      z-index:2;
+    }
+    .slogan{
+      background:rgba(255,255,255,0.3);
+      position: absolute;
+      padding: 20px 0;
+      z-index: 3;
+      top:30%;
+      width:100%;
+      text-align: center;
+      color:#fff;
+      cursor: default;
+      @include text-shadow(2px,2px,0px,rgba(0,0,0,.5));
+      .txt1{
+        font-size:40px;
+        font-family:'SansCJK-L';
+      }
+      .txt2{
+        font-size:55px;
+        font-family:'SansCJK-B';
+      }
+      .txt3{
+        font-size:26px;
+        font-family:'SansCJK-L';
+      }
+    }
+    a.btn{
+      position: absolute;
+      z-index: 4;
+      width:180px;
+      bottom:60px;
+      left: 50%;
+      @include border-radius(30px);
+      margin-left:-90px;
+      font-size:24px;
+      border:0;
+      font-weight:bold;
+    }
+    .swiper-pagination-bullet{
+      border-radius: 0;
+      background: #fff;
+      text-indent: -9999px;
+      width: 60px;
+      height: 5px;
+      margin: 0 5px;
+      outline: 0;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active{
+      background: $brand-primary;
+    }
+  }
+}
+.container{
+  .sec-header {
+    margin-top:50px;
+    width: 100%;
+    padding: 0px 0px 40px 0px;
+    text-align: center;
+    h2{
+      font-size:46px;
+      font-family: 'SansCJK';
+    }
+    p{
+      font-size:32px;
+      font-family:'SansCJK-L';
+      color: $brand-primary;
+    }
+  }
+  .span4 {
+    &:hover{
+      .services {
+        .header {
+          .fa-stack-2x{
+            color:$brand-primary;
+          }
+        }
+      }
+    }
+    .services {
+      width: 100%;
+      .header {
+        width: 100%;
+        height:180px;
+        position: relative;
+        text-align: center;
+        .fa-tablet {
+          line-height: 170px;
+          color: #dedede;
+        }
+        .fa-stack-2x{
+          font-size: 190px;
+        }
+        .fa-stack-1x {
+          font-size: 60px;
+          top:30px;
+          color: $brand-primary;
+        }
+      }
+      .text {
+        position: relative;
+        width: 100%;
+        padding: 0px 20px;
+        h3 {
+          font-size: 24px;
+          line-height: 30px;
+          margin: 0px 0px 30px 0px;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: normal;
+          a{
+            color: $brand-primary;
+          }
+        }
+        p {
+          margin: 0 0 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+
 .thing-form {
   margin: 20px 0;
 }
