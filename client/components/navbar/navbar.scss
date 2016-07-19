@@ -2,7 +2,12 @@
   background-color: black;
   color: white;
   font-weight: 700;
-  a:hover{
-    background-color: #2e6589;
+  .navbar-brand{
+    color: white;
+
+  }
+  .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: white;
+
   }
 }
