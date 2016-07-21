@@ -16,15 +16,15 @@
   .row
     .col-lg-12
       h1.page-header Features:
-      ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in $ctrl.awesomeThings')
+      ul.nav.nav-tabs.nav-stacked.col-md-4.col-lg-4.col-sm-6(ng-repeat='thing in awesomeThings')
         li
           a(href='#', uib-tooltip='{{thing.info}}')
             | {{thing.name}}
-            button.close(type='button', ng-click='$ctrl.deleteThing(thing)') &times;
+            button.close(type='button', ng-click='deleteThing(thing)') &times;
 
   form.thing-form
     label Syncs in realtime across clients
     p.input-group
-      input.form-control(type='text', placeholder='Add a new thing here.', ng-model='$ctrl.newThing')
+      input.form-control(type='text', placeholder='Add a new thing here.', ng-model='newThing')
       span.input-group-btn
-        button.btn.btn-primary(type='submit', ng-click='$ctrl.addThing()') Add New
+        button.btn.btn-primary(type='submit', ng-click='addThing()') Add New
