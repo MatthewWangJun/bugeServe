@@ -1,8 +1,16 @@
-header#banner.hero-unit
-  .container
-    h1 'Allo, 'Allo!
-    p.lead Kick-start your next web app with Angular Fullstack
-    img(src='assets/images/yeoman.png', alt='I\'m Yeoman')
+.banner
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide(ng-repeat='img in bannerImage',data-repeat-done='onBannerUpeded()')
+          a(ng-style='img.bg',ng-click='go($index)')
+      .spaceBG
+      .slogan
+        .txt1 从校园到企业的培训专家
+        .txt2 知新实训课堂
+        .txt3 From the campus to the enterprise training experts
+      a.btn.btn-primary(ui-sref='index.signin') 开始学习
+      .swiper-pagination
+        div.content
 
 .container
   .row
